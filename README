@@ -1,0 +1,26 @@
+casiano@exthost:~/src/prolog$ cat fact.pl 
+fact(X, 1) :- X<2.
+fact(X, F) :- Y is X-1, fact(Y,Z), F is Z*X.
+casiano@exthost:~/src/prolog$ 
+casiano@exthost:~/src/prolog$ prolog  
+Welcome to SWI-Prolog (Multi-threaded, 32 bits, Version 5.8.0)
+Copyright (c) 1990-2009 University of Amsterdam.
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [fact].
+% fact compiled 0.00 sec, 1,052 bytes
+true.
+
+?- fact(4,F).
+F = 24 .
+
+?- fact(9,F).
+F = 362880 .
+
+?- 
+% halt
+
